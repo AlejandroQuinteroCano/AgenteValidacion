@@ -1,30 +1,55 @@
 <!--Interfaz de Validación Creación 01 Abril de 2025-->
-
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="styles.css">
-        <title>Agente-Validacion</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="container__contenido">
-                <div class="container__informaciones">
-            <h1> Binvenidos Agente de Validacion </h1>
-                     <img src="./img/ia.png" alt ="Una imgane de ia" class="container__imagne-persona" />
-        
-        <div class="click container__botones">
-            <button onclick="validararchivo();" class="container__miBoton">Validar</button>
-            <button onclick="reiniciarArchivo()" class="container__miBoton" id="reiniciar">Nuevo Archivo</button>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Agente Validacion MarketinkLab</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1></h1>
+                    <p class="texto__parrafo"></p>
+                <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
+                <div class="chute container__botones">
+                    <button onclick="validar_Archivo();" class="container__boton">Validar</button>
+                    <button onclick="nuevo_archivo();" class="container__boton" id="reiniciar" disabled>Nuevo Archivo</button>
+                    
+                -</div>
+            </div>
+           
         </div>
     </div>
 </div>
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1></h1>
+                    <p class="texto__parrafo"></p>
+                
+                </div>
+              >
+                <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
+                <div class="chute container__botones">
+                    <button onclick="validar_resultado();" class="container__boton">Resultado</button>
+                -</div>
+            </div>
+           
         </div>
-        <!--<script src="script.js">   </script>-->
-    </body>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+<img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="left_imagen"/>
 </html>
 
