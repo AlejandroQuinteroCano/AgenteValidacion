@@ -46,8 +46,8 @@ body::before {
     content: "";
     display: block;
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     opacity: 0.4;
     z-index: -1;
 }
@@ -73,7 +73,7 @@ body::before {
     height: auto;
     display: block;
     border-radius: 10px;
-    object-fit: contain; /* 👈 ayuda a mantener proporciones */
+    object-fit: contain; /* ayuda a mantener proporciones */
 }
 
 #preview img,
@@ -126,7 +126,7 @@ body::before {
 
 .container__input {
     width: 100%;
-    height: 40%;
+    height: 80%;
     border-radius: 16px;
     background-color: #FFF;
     border: none;
@@ -144,7 +144,7 @@ body::before {
 
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
+    font-size: 95px;
     padding-bottom: 3rem;
 }
 img, video {
@@ -158,7 +158,7 @@ button {
 }
 
 .texto__parrafo {
-    font-size: 32px;
+    font-size: 80px;
     font-weight: 400;
 }
 
@@ -205,16 +205,16 @@ button:hover {
 }
 
 #result.error {
-    color: red;
+    color: blue;
     background-color: #fdecea;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #f5c6cb;
     border-radius: 4px;
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 40px;
+        font-size: 80px;
     }
 
     .container {
