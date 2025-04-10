@@ -93,3 +93,4 @@ function nuevo_archivo() {
     reiniciarBtn.disabled = true;
 }
 result.className = 'success'; // o 'error'
+
