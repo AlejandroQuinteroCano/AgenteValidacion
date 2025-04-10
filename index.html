@@ -1,93 +1,47 @@
 <!--Interfaz de Validación Creación 01 Abril de 2025-->
-
 <!DOCTYPE html>
-
 <html lang="es">
 
-
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-
         rel="stylesheet">
 
-        
-
-        <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="styles.css">
     <title>Agente Validacion MarketinkLab</title>
-
 </head>
 
-
-
 <body>
-
+    <h1>Marketing Lab Validador de Archivos</h1>
+    <hr>
     <div class="container">
+    <div class="container__menu">Menu</div>
 
+    <div class="container__contenido">
+        <h1>Validador de Imágenes y Videos</h1>
+        <form id="fileForm">
 
-
-        <div class="container__contenido">
-
-            <div class="container__informaciones">
-
-                <div class="container__texto">
-
-                   <h1>Validador de Imágenes y Videos</h1>
-
-                    <form id="fileForm">
-
-
-
-                        <label for="fileInput" aria-label="Selecciona un archivo">Selecciona un archivo:</label>
-
-                        <input type="file" id="fileInput" accept="image/*,video/*" aria-describedby="fileHelp">
-
-                        <small id="fileHelp" class="form-text text-muted">Puedes seleccionar imágenes o videos.</small>
-
-                        <button type="submit" aria-label="Validar archivo">Validar</button>
-
-                        
-
-                    </form>
-
-                    <button type="button" onclick="nuevo_archivo();" class="container__boton" id="reiniciar" disabled>Nuevo Archivo</button>
-
-
-
-                        <p id="result"></p>
-
-                </div>
-
-                <div id="preview" style="margin-top: 20px;"></div>
-
-                <p class="texto__parrafo"></p>
-
-                
-
-                        
-
-            </div>
-
-            <img src="./img/ia.png" alt="Una persona mirando a la izquierda"/>
-
-        </div>
-
-        
-
+            <label for="fileInput" aria-label="Selecciona un archivo">Selecciona un archivo:</label>
+            <input type="file" id="fileInput" accept="image/*,video/*" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Puedes seleccionar imágenes o videos.</small>
+            <button type="submit" aria-label="Validar archivo">Validar</button>
+        </form>
+        <button type="button" onclick="nuevo_archivo();" class="container__boton" id="reiniciar" disabled>Nuevo
+            Archivo</button>
+        <p id="result"></p>
+        <div id="preview" style="margin-top: 20px;"></div>
+        <p class="texto__parrafo"></p>
     </div>
-
-        <script src="script.js" defer></script>
-
+    <hr>
+    <div class="container__aside">
+        <h1>Informacion</h1>
+        <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="img"/>
+    </div>
+    </div>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
