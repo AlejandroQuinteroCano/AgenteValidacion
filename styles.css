@@ -23,7 +23,7 @@
   }
 
 .container {
-
+    
     display: flex; /* Organiza los elementos en una fila */
     flex-direction: row; /* Asegura que estén en una fila horizontal */
     justify-content: space-between; /* Espacio entre los elementos */
@@ -237,27 +237,37 @@ button:hover {
     border: 1px solid #f5c6cb;
     border-radius: 4px;
 }
-*/
+*//* Estilo general para pantallas grandes */
+
+
+/* Ajustes para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 40px;
-    }
-
     .container {
-        padding: 1rem;
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
     }
 
-    .container__input {
-        font-size: 18px;
-        padding: 1rem;
+    .container__menu,
+    .container__contenido,
+    .container__aside {
+        width: 100%; /* Ocupan todo el ancho */
+        margin-bottom: 20px; /* Espaciado entre los elementos */
     }
 
-    .texto__parrafo {
-        font-size: 20px;
+    .container__menu {
+        text-align: center;
     }
 
-    .container__botones {
-        flex-direction: column;
-        gap: 1em;
+    .container__contenido {
+        padding: 15px;
+    }
+
+    .container__aside {
+        padding: 15px;
+    }
+
+    img {
+        max-width: 100%; /* Ajusta las imágenes al ancho del contenedor */
+        height: auto; /* Mantiene las proporciones */
     }
 }
