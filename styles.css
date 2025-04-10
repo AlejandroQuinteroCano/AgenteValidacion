@@ -1,22 +1,8 @@
 /*Entorno de interfaz grafica*/
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-
-}
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* 👈 evita desbordamiento horizontal */
-}
-body {
-    /*background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);*/
-    height: auto;
+/*.container__texto-azul {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);*/
+   /* height: auto;
     margin: 0;
     padding: 2rem;
     background-color: white;
@@ -28,16 +14,67 @@ body {
     flex-direction: column;
 
 }
+*/body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    text-align: center;
+  }
 
+.container {
 
-.container_left_image {
-    display: flex;
+    display: flex; /* Organiza los elementos en una fila */
+    flex-direction: row; /* Asegura que estén en una fila horizontal */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+    
+    /*width: 200%;
+    max-width: 1000px;
+    margin-left: 20px;
+    border: 1px solid #47d06e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(20, 164, 83, 0.1);
+    
+    float: left;
+   */
+}
+.container__menu{
+    width: 250px;
+    height: 100%;
+    flex: 1; /* Toma un espacio proporcional */
+    background-color:white;
+    color:black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+.container__contenido {
     align-items: center;
+     width: 500px;
+    height: 100%;
+    flex: 2; /* Toma más espacio que el menú */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(49, 169, 61, 0.1);
+}
+.container__aside{
+    width: 250px;
+    height: 100%;
+    flex: 1; /* Toma un espacio proporcional */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(74, 235, 106, 0.1);
+    
 }
 
-.left_image {
-    margin-right: 10px;
-}
 
 body::before {
     background-image: url("img/code.png");
@@ -46,25 +83,19 @@ body::before {
     content: "";
     display: block;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     opacity: 0.4;
     z-index: -1;
 }
-
-.container {
-
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow-x: hidden;
-   
+.img {
+    max-width: 100%; /* Ajusta la imagen al ancho del div */
+    height: auto; /* Mantiene las proporciones */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
 }
+/*
+
 
 #preview img,
 #preview video {
@@ -73,19 +104,14 @@ body::before {
     height: auto;
     display: block;
     border-radius: 10px;
-    object-fit: contain; /* ayuda a mantener proporciones */
+    object-fit: contain; /* 👈 ayuda a mantener proporciones 
 }
 
 #preview img,
 #preview video {
-    max-height: 70vh; /* evita que sea más alto que la pantalla */
+    max-height: 70vh; /* evita que sea más alto que la pantalla 
 }
-.container__contenido {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-}
+
 
 .container__informaciones {
     flex: 1;
@@ -126,7 +152,7 @@ body::before {
 
 .container__input {
     width: 100%;
-    height: 80%;
+    height: 40%;
     border-radius: 16px;
     background-color: #FFF;
     border: none;
@@ -141,12 +167,12 @@ body::before {
     display: flex;
     gap: 2em;
 }
-
+*/
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 95px;
+    font-size: 44px;
     padding-bottom: 3rem;
-}
+}/*
 img, video {
     max-width: 100%;
     height: auto;
@@ -158,7 +184,7 @@ button {
 }
 
 .texto__parrafo {
-    font-size: 80px;
+    font-size: 32px;
     font-weight: 400;
 }
 
@@ -205,16 +231,16 @@ button:hover {
 }
 
 #result.error {
-    color: blue;
+    color: red;
     background-color: #fdecea;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #f5c6cb;
     border-radius: 4px;
 }
-
+*/
 @media (max-width: 768px) {
     h1 {
-        font-size: 80px;
+        font-size: 40px;
     }
 
     .container {
