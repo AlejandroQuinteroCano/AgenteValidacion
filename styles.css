@@ -237,6 +237,12 @@ button:hover {
     border: 1px solid #f5c6cb;
     border-radius: 4px;
 }
+
+section.footer{
+text-align:center;
+background-color: while;
+padding:20px;
+}
 *//* Estilo general para pantallas grandes */
 
 
