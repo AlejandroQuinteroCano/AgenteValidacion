@@ -11,7 +11,7 @@ document.getElementById('fileForm').addEventListener('submit', function (e) {
 
     if (!file) {
         result.textContent = 'Por favor, selecciona un archivo.';
-        result.style.color = 'red';
+        result.style.color = 'blue';
         preview.innerHTML = '';
         return;
     }
@@ -19,7 +19,7 @@ document.getElementById('fileForm').addEventListener('submit', function (e) {
     const maxSizeMB = 10;
     if (file.size > maxSizeMB * 1024 * 1024) {
         result.textContent = `El archivo supera el tamaño máximo permitido de ${maxSizeMB}MB.`;
-        result.style.color = 'red';
+        result.style.color = 'yellow';
         preview.innerHTML = '';
         return;
     }
