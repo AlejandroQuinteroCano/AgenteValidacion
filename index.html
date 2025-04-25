@@ -1,52 +1,71 @@
-<!--Interfaz de Validación Creación 01 Abril de 2025-->
+<!--Interfaz de Validación Creación 01 Abril de 2025
+//Documentacion Javascript para validador de arcg¿hivo en Marketing LAB
+// Proyecto de grado Practia de servicios nutresa 1 abri de 2025
+//Autor Alejandro Quintero-->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
-
+    rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+
     <title>Agente Validacion MarketinkLab</title>
 </head>
 
 <body>
     <h1>Marketing Lab Validador de Archivos</h1>
-    <img src="./img/log.png"  alt="Logo Servicio Nutresa" class="img"/>
+<img src="img/log.png" alt="Logo N" class="img">
     <hr>
     <div class="container">
-    <div class="container__menu">Analitica Data</div>
-
+    <div class="container__menu">
+    <H1>INFORMACION</H1>
+    <H2>Presentacion corporativa</H2>
+    <div class="container_video">
+        <video src="./video/Grupo Nutresa _ Presentación Corporativa.mp4" controls width="100%"></video>
+    </div>
+               <!--<img src="./img/1. NATIVE ADS IMAGEN.png" class="img_dev"/>
+        <img src="./img/2. NATIVE ADS VIDEO.png" class="img_dev"/>S
+        <img src="./img/3. BANNER AD.png" class="img_dev"/>
+        <img src="./img/4. VIDEO BUMPER -FEE.png" class="img_dev">-->
+    </div>
     <div class="container__contenido">
         <h1>Validador de Imágenes y Videos</h1>
         <form id="fileForm">
-
-            <label for="fileInput" aria-label="Selecciona un archivo">Selecciona un archivo:</label>
-            <input type="file" id="fileInput" accept="image/*,video/*" aria-describedby="fileHelp">
             <small id="fileHelp" class="form-text text-muted">Puedes seleccionar imágenes o videos.</small>
-            <button type="submit" aria-label="Validar archivo">Validar</button>
+           <!-- <label for="fileInput"  aria-label="Selecciona un archivo">Selecciona un archivo:</label> -->
+           
+           <p>
+           <input type="file" id="fileInput" accept="image/*,video/*" class="container__input_arc"aria-describedby="fileHelp">
+        </p>
+            <button type="submit" aria-label="Validar archivo" class="container__boton">Validar</button>
+            <button type="button" onclick="nuevo_archivo();" class="container__boton" id="reiniciar" disabled>Nuevo</button>
         </form>
-        <button type="button" onclick="nuevo_archivo();" class="container__boton" id="reiniciar" disabled>Nuevo
-            Archivo</button>
+       
         <p id="result"></p>
-        <div id="preview" style="margin-top: 20px;"></div>
+               <div id="preview" style="margin-top: 20px;"></div>
         <p class="texto__parrafo"></p>
     </div>
     <hr>
     <div class="container__aside">
-        <h1>Experiencia Digital</h1>
+        <h1>Informacion</h1>
         <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="img"/>
     </div>
     </div>
-    <section class= "footer">
-        <p>ALEJANDRO QUINTERO</p>
-        <p>Desarrollo Software</p>
+    <footer class="footer">
+        <h1>Version. 1.</h1>
         <p>EXPERIENCIA DIGITAL</p>
-        <p>2025</p>
+        
+        <p>DESARROLLO SOFTWARE</p>
+        <p>ALEJANDRO QUINTERO</p>
+        <P>2025</P>
     <script src="script.js" defer></script>
 </body>
 
