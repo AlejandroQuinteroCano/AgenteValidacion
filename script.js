@@ -11,6 +11,7 @@ document.getElementById('fileForm').addEventListener('submit', function (e) {
     const file = fileInput.files[0];
     const preview = document.getElementById('preview');
 // Limpiar el contenedor de vista previa
+    
 preview.innerHTML = '';
     if (!file) {
         result.textContent = 'Por favor, selecciona un archivo para la verificacion.';
@@ -100,6 +101,7 @@ preview.innerHTML = '';
                     }
                     exifInfo += '</ul>';
                 }
+                preview.innerHTML ='';
               preview.innerHTML += `
         <div style="background: #eef; padding: 10px; margin-top: 15px; border-radius: 6px; text-align: left;">
             ${exifInfo}
@@ -117,6 +119,7 @@ preview.innerHTML = '';
                         <p style="white-space: pre-wrap; font-family: monospace;">${text || 'No se detectó texto'}</p>
                     </div>
                 `;
+                 preview.innerHTML ='';
                 preview.innerHTML += ocrHTML; // Agrega el resultado de OCR al contenedor de vista previa
             }).catch((err) => {
                 console.error('Error al detectar texto:', err);
@@ -126,7 +129,7 @@ preview.innerHTML = '';
                         <p>${err.message}</p>
                     </div>
                 `;
-            
+              preview.innerHTML ='';
                 preview.innerHTML += errorHTML;
                  // Muestra el error en la vista previa
             });
