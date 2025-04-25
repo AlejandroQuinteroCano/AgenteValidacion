@@ -47,6 +47,9 @@ preview.innerHTML = '';
         image.onload = function () {
             const width = image.width;
             const height = image.height;
+
+            // Limpiar el contenedor de vista previa
+preview.innerHTML = '';
         
  // Mostrar detalles de la imagen
  preview.innerHTML = `
