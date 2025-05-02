@@ -97,6 +97,24 @@ body::before {
     opacity: 0.4;
     z-index: -1;
 }
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espacio entre imagen y texto */
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+
 .img {
     max-width: 100%; /* Ajusta la imagen al ancho del div */
     height: auto; /* Mantiene las proporciones */
@@ -152,7 +170,7 @@ body::before {
     cursor: pointer;
     transition: background-color 0.3s;
     align-content: center;
-
+    overflow: hidden;
 }
 
 button:hover {
