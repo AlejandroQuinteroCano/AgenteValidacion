@@ -172,22 +172,7 @@ body::before {
     align-content: center;
     overflow: hidden;
 }
-.container__boton_info {
 
-width: 100%;
-height: 30px;
-padding: 10px 20px; /* Esto agrega 10px de espacio arriba, abajo, izquierda y derecha */
-    font-weight: 700; 
-    border-radius: 50px;
-    background: rgb(101,197,90);
-        border: rgb(16, 143, 211);
-    margin-top: 10px;
-     background-color:bold;
-    color: black;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    overflow:hidden;
-}
 button:hover {
     background-color: #16a76d;
   }
