@@ -2,95 +2,134 @@
 //Documentacion Javascript para validador de arcg¿hivo en Marketing LAB
 // Proyecto de grado Practia de servicios nutresa 1 abri de 2025
 //Autor Alejandro Quintero-->
+
+<!-- Declaracion tipo de documento-->
 <!DOCTYPE html>
+<!--  inicio de documento y el idioma principal español-->
 <html lang="es">
 <head>
+    <!-- define la codificacion de caracteres como utf-8 caracteres especiales -->
     <meta charset="UTF-8">
+ <!-- hace que el diseño se adapte a diferentes tamaños de pantalla diseño responsivo-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Optimiza las fuentes externas al establecer conexiones previas con los servidores de google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <!-- importa funetes chakra petch y Inter dede google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
     rel="stylesheet">
+    <!-- Importa bibliotecas color thief para extraer colores domimantes de imagnes -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+   <!--Vincula el archivo CSS externo para los estilos de la página. --> 
     <link rel="stylesheet" href="styles.css">
+    <!-- Incluye la biblioteca Exif.js para leer metadatos de imágenes.
+-->
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
-    <script src="script.js" defer></script>
+    
+    <!--Incluye la biblioteca Tesseract.js para realizar reconocimiento óptico de caracteres (OCR). -->
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+    <!-- Incluye la biblioteca PDF.js para trabajar con archivos PDF.-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
 
     <title>Agente Validacion MarketinkLab</title>
 </head>
-
+<!-- -->
 <body>
     <header class="header">
     <h1>Marketing Lab Validador de Archivos</h1>
 <img src="img/log.png" alt="Logo N" class="img">
-
+<!--<header>: Define el encabezado de la página.
+<h1>: Título principal de la página: 
+    "Marketing Lab Validador de Archivos".
+<img>: Muestra una imagen con la ruta log.png.
+ El atributo alt proporciona texto alternativo ("Logo N") 
+ en caso de que la imagen no se cargue. -->
 </header>
+<!-- <hr>: Inserta una línea horizontal para separar secciones.-->
     <hr>
+    <!-- <div class="container__menu">: Contenedor para el menú de información.
+<h1> y <h2>: Títulos de la sección.
+<video>: Muestra un video con controles. La ruta del video es ./video/Grupo Nutresa _ Presentación Corporativa.mp4. -->
     <div class="container">
+        <!--<div>: Contenedor principal con la clase 
+            container que agrupa todo el contenido.-->
     <div class="container__menu">
     <H1>INFORMACION</H1>
     <H2>Presentacion corporativa</H2>
     <div class="container_video">
         <video src="./video/Grupo Nutresa _ Presentación Corporativa.mp4" controls width="100%"></video>
-<form id="fileForm">
-     <h1>Accesos a nuestros Clientes!</h1>
-        <a href="https://haka.com.co/"><button type="button" class="container__boton_info">Haka</button></a><hr>
-     <a href="https://chocolisto.com/"><button type="button" class="container__boton_info">Chocolisto</button></a><hr>
-     <a href="https://www.badiacolombia.com/"><button type="button" class="container__boton_info">Badia</button></a><hr>
-         <a href="https://www.papajohns.com.co/"><button type="button" class="container__boton_info">Papa Johns</button></a><hr>
+
+         <!-- Descripcion de boton para enviar pagina <a href="URL_de_la_pagina_de_destino">
+  <button>Texto del botón</button>
+</a>-->
+ 
+<h1>Accesos a nuestros Clientes!</h1>
+<a href="https://haka.com.co/"><button type="button" class="container__boton_info">Haka</button></a><hr>
+<a href="https://chocolisto.com/"><button type="button" class="container__boton_info">Chocolisto</button></a><hr>
+<a href="https://www.badiacolombia.com/"><button type="button" class="container__boton_info">Badia</button></a><hr>
+<a href="https://www.papajohns.com.co/"><button type="button" class="container__boton_info">Papa Johns</button></a><hr>
  <a href="https://www.tiendanutresaencasa.com/"><button type="button" class="container__boton_info">Tienda Nutresa en Casa</button></a><hr>
-            </form> 
-
-
-
-        
-    </div>
+            </form>         
+            </div>
+            </div>
+    <!-- <div class="container__menu">: Contenedor para el menú de información.
+<h1> y <h2>: Títulos de la sección.
+<video>: Muestra un video con controles. La ruta del video es ./video/Grupo Nutresa _ Presentación Corporativa.mp4.-->
                <!--<img src="./img/1. NATIVE ADS IMAGEN.png" class="img_dev"/>
         <img src="./img/2. NATIVE ADS VIDEO.png" class="img_dev"/>S
         <img src="./img/3. BANNER AD.png" class="img_dev"/>
         <img src="./img/4. VIDEO BUMPER -FEE.png" class="img_dev">-->
-    </div>
+    
+    <!-- <div class="container__contenido">: Contenedor para el contenido principal.
+<h1>: Mensaje de bienvenida.
+<form>: Formulario para subir archivos.
+<small>: Texto de ayuda para el usuario.
+<input type="file">: Campo para seleccionar archivos (imágenes y videos).
+<button>: Botones para validar y reiniciar el formulario.
+<p>: Elementos para mostrar resultados, requisitos y una vista previa del archivo.
+Sección L-->
 
-
-
-        
     <div class="container__contenido">
         <h1>BIENVENIDO! Aqui puedes Validar archivos como Imágenes, Videos, Plano(txt) y Pdf.</h1>
+        
         <form id="fileForm">
             <small id="fileHelp" class="form-text text-muted">Puedes seleccionar imágenes,videos, txt, Pdf.</small>
            <!-- <label for="fileInput"  aria-label="Selecciona un archivo">Selecciona un archivo:</label> -->
            
            <p>
-           <input type="file" id="fileInput" accept="image/*,video/*" class="container__input_arc"aria-describedby="fileHelp">
+        
+            <input type="file" id="fileInput" accept="image/*,video/*" class="container__input_arc"aria-describedby="fileHelp">
         </p>
-            <button type="submit" aria-label="Validar archivo" class="container__boton">Validar</button>
+            <button type="submit" aria-label=" Validar archivo" class="container__boton">Validar</button>
             <button type="button" onclick="nuevo_archivo();" class="container__boton" id="reiniciar" disabled>Nuevo</button>
         </form>
        
         <p id="result"></p>
         <p id="requirements"></p>
-        <p id="result"> </p>
-
-
-               <div id="preview" style="margin-top: 20px;"></div>
+        <div id="preview" style="margin-top: 20px;"></div>
         <p class="texto__parrafo"></p>
     </div>
     <hr>
+    <!--<div class="container__aside">: Contenedor para información adicional.
+<h1>: Título de la sección.
+<img>: Imagen con la ruta ia.png.-->
     <div class="container__aside">
         <h1>Informacion</h1>
         <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="img"/>
     </div>
     </div>
+    <!--<footer>: Define el pie de página.
+<h1> y <p>: Información sobre la versión, experiencia digital, desarrollo de software, autor y año.-->
     <footer class="footer">
         <h1>Version. 1.</h1>
         <p>EXPERIENCIA DIGITAL</p>
-        
-        <p>DESARROLLO SOFTWARE</p>
+       <p>DESARROLLO SOFTWARE</p>
         <p>ALEJANDRO QUINTERO</p>
         <P>2025</P>
-    <script src="script.js" defer></script>
+        <!--<script>: Incluye el archivo JavaScript script.js con el atributo defer, que asegura que el script se cargue después de que el HTML haya sido procesado.-->
+    
+            <script src="script.js" defer></script>
 </body>
-
+<!--Cierra el cuerpo y el documento HTML.-->
 </html>

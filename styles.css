@@ -129,12 +129,12 @@ body::before {
     margin: 0 auto; /* Centra la imagen horizontalmente */
 }
   .container__input [type="file"]{
-    width: 100%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
     border-radius: 16px;
     background-color: #FFF;
     border: 1px solid #ccc;
-    color: #1875E8;
+    color: rgb(26, 86, 50);
     padding: 2rem;
     font-size: 24px;
     font-weight: 700;
@@ -142,12 +142,12 @@ body::before {
     cursor: pointer;
 }
 .container__input_arc{
-    width: 80% ;
-    height: auto;
+    width: 50% ;
+    height: 50%;
     border-radius: 20px;
-    background-color: rgb(101,197,90);
-    border: 5px solid #0ed91c;
-    color: #070b0e;
+    background-color: rgb(26, 86, 50);
+    border: 5px solid white;
+    color: white;
     padding: 2rem;
     font-size: 20px;
     font-weight: 700;
@@ -158,21 +158,38 @@ body::before {
 
 .container__boton {
     border-radius: 20px;
-    background: rgb(101,197,90);
-    width: 30%;
-    font-size: 24px;
+    background: rgb(26, 86, 50);
+    width: 50%;
+    height: 50%;
+    font-size: 22px;
     font-weight: 700;
     border: rgb(16, 143, 211);
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color:bold;
-    color: black;
+    color: white;
     cursor: pointer;
     transition: background-color 0.3s;
     align-content: center;
     overflow: hidden;
 }
+.container__boton_info {
 
+width: 100%;
+height: 30px;
+padding: 10px 20px; /* Esto agrega 10px de espacio arriba, abajo, izquierda y derecha */
+    font-weight: 700; 
+    border-radius: 50px;
+    background: rgb(26, 86, 50);
+        border: rgb(16, 143, 211);
+    margin-top: 10px;
+     background-color:bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    overflow:hidden;
+    font-size: 18px;
+}
 button:hover {
     background-color: #16a76d;
   }

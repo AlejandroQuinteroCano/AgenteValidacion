@@ -5,11 +5,15 @@
 // Función para validar el archivo
 document.getElementById('fileForm').addEventListener('submit', function (e) {
     e.preventDefault();
+    console.log("¡El botón Validar fue presionado y el evento submit se disparó!"); // <-- Añade esta línea
+
 
     const fileInput = document.getElementById('fileInput');
     const result = document.getElementById('result');
     const file = fileInput.files[0];
+console.log("Archivo seleccionado:", file);
     const preview = document.getElementById('preview');
+
     const requirements = document.getElementById('requirements');
 
     const validImageFormats = ['image/jpeg', 'image/png', 'image/gif'];
