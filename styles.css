@@ -122,6 +122,12 @@ body::before {
     margin: 0 auto; /* Centra la imagen horizontalmente */
     align-items: center;
 }
+.img2 {
+            width: 30px; /* Tamaño del icono, puedes ajustarlo */
+            height: auto; /* Mantiene la proporción */
+            cursor: pointer; /* Indica que es clicable */
+            border: none; /* Elimina borde si la imagen lo tiene por defecto */
+        }
 .img_dev {
     max-width: 100%; /* Ajusta la imagen al ancho del div */
     height: auto; /* Mantiene las proporciones */
